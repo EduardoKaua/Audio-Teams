@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "id": "47d21570-848c-4c9c-88af-d0b7a163cee9",
   "developer": {
     "name": "Fator Contabilidade",
@@ -28,6 +28,13 @@
       "name": "Enviar Áudio",
       "contentUrl": "https://eduardokaua.github.io/Audio-Teams/index.html",
       "scopes": ["personal"]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://eduardokaua.github.io/Audio-Teams/config.html",
+      "canUpdateConfiguration": true,
+      "scopes": ["groupChat", "team"]
     }
   ],
   "permissions": ["identity", "messageTeamMembers"],
