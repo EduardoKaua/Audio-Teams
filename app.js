@@ -56,10 +56,19 @@ async function startRecording() {
     audioBlob = new Blob(chunks, { type: mimeType });
     preview.src = URL.createObjectURL(audioBlob);
     preview.classList.remove("hidden");
-    shareBtn.classList.remove("hidden");
     downloadBtn.classList.remove("hidden");
     resetBtn.classList.remove("hidden");
-    statusEl.textContent = "Gravação pronta. Ouça e compartilhe.";
+
+    const file = new File([audioBlob], "audio.webm", { type: mimeType });
+    const shareSupported = navigator.canShare && navigator.canShare({ files: [file] });
+    if (shareSupported) {
+      shareBtn.classList.remove("hidden");
+      statusEl.textContent = "Gravação pronta. Ouça e compartilhe.";
+    } else {
+      hint.classList.remove("hidden");
+      statusEl.textContent = "Gravação pronta. Baixe e anexe no chat.";
+    }
+
     stream.getTracks().forEach((track) => track.stop());
   };
 
@@ -85,21 +94,14 @@ async function shareAudio() {
     type: audioBlob.type,
   });
 
-  if (navigator.canShare && navigator.canShare({ files: [file] })) {
-    try {
-      await navigator.share({
-        files: [file],
-        title: "Áudio",
-      });
-      statusEl.textContent = "Compartilhado.";
-      hint.classList.add("hidden");
-      return;
-    } catch (err) {
-      if (err.name === "AbortError") return;
+  try {
+    await navigator.share({ files: [file], title: "Áudio" });
+    statusEl.textContent = "Compartilhado.";
+  } catch (err) {
+    if (err.name !== "AbortError") {
+      hint.classList.remove("hidden");
     }
   }
-
-  hint.classList.remove("hidden");
 }
 
 function downloadAudio() {
