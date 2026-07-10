@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enviar Áudio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Gravar áudio</h1>
+    <p id="status" class="status">Pronto para gravar</p>
+
+    <div class="timer" id="timer">00:00</div>
+
+    <div class="controls">
+      <button id="recordBtn" class="btn btn-record">Gravar</button>
+      <button id="stopBtn" class="btn btn-stop" disabled>Parar</button>
+    </div>
+
+    <audio id="preview" controls class="preview hidden"></audio>
+
+    <div class="controls">
+      <button id="shareBtn" class="btn btn-primary hidden">Compartilhar</button>
+      <button id="downloadBtn" class="btn btn-secondary hidden">Baixar áudio</button>
+      <button id="resetBtn" class="btn btn-reset hidden">Nova gravação</button>
+    </div>
+
+    <p id="hint" class="hint hidden">
+      Não foi possível compartilhar diretamente. Baixe o áudio e anexe manualmente no chat do Teams.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

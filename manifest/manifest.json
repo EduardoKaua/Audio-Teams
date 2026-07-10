@@ -1,0 +1,35 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "developer": {
+    "name": "Fator Contabilidade",
+    "websiteUrl": "https://SEU-USUARIO.github.io/Audio-Teams",
+    "privacyUrl": "https://SEU-USUARIO.github.io/Audio-Teams",
+    "termsOfUseUrl": "https://SEU-USUARIO.github.io/Audio-Teams"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Enviar Áudio",
+    "full": "Gravador de Áudio para Teams"
+  },
+  "description": {
+    "short": "Grava e compartilha áudios rapidamente",
+    "full": "Aplicativo leve para gravar um áudio pelo microfone e compartilhar diretamente em um chat ou canal do Teams."
+  },
+  "accentColor": "#5B5FC7",
+  "staticTabs": [
+    {
+      "entityId": "audioTab",
+      "name": "Enviar Áudio",
+      "contentUrl": "https://SEU-USUARIO.github.io/Audio-Teams/index.html",
+      "scopes": ["personal"]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": ["SEU-USUARIO.github.io"]
+}
