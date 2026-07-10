@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
   "version": "1.0.0",
-  "id": "00000000-0000-0000-0000-000000000000",
+  "id": "47d21570-848c-4c9c-88af-d0b7a163cee9",
   "developer": {
     "name": "Fator Contabilidade",
-    "websiteUrl": "https://SEU-USUARIO.github.io/Audio-Teams",
-    "privacyUrl": "https://SEU-USUARIO.github.io/Audio-Teams",
-    "termsOfUseUrl": "https://SEU-USUARIO.github.io/Audio-Teams"
+    "websiteUrl": "https://eduardokaua.github.io/Audio-Teams",
+    "privacyUrl": "https://eduardokaua.github.io/Audio-Teams",
+    "termsOfUseUrl": "https://eduardokaua.github.io/Audio-Teams"
   },
   "icons": {
     "color": "color.png",
@@ -26,10 +26,10 @@
     {
       "entityId": "audioTab",
       "name": "Enviar Áudio",
-      "contentUrl": "https://SEU-USUARIO.github.io/Audio-Teams/index.html",
+      "contentUrl": "https://eduardokaua.github.io/Audio-Teams/index.html",
       "scopes": ["personal"]
     }
   ],
   "permissions": ["identity", "messageTeamMembers"],
-  "validDomains": ["SEU-USUARIO.github.io"]
+  "validDomains": ["eduardokaua.github.io"]
 }
