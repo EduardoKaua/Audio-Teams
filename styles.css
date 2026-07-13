@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fator-blue-dark: #00397f;
+  --fator-blue-light: #659dc2;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -23,10 +28,15 @@ body {
   text-align: center;
 }
 
+.logo {
+  height: 40px;
+  margin-bottom: 16px;
+}
+
 h1 {
   font-size: 20px;
   margin: 0 0 8px;
-  color: #242424;
+  color: var(--fator-blue-dark);
 }
 
 .status {
@@ -38,7 +48,7 @@ h1 {
 .timer {
   font-size: 32px;
   font-variant-numeric: tabular-nums;
-  color: #242424;
+  color: var(--fator-blue-dark);
   margin-bottom: 20px;
 }
 
@@ -76,7 +86,7 @@ h1 {
 }
 
 .btn-primary {
-  background: #5b5fc7;
+  background: var(--fator-blue-dark);
   color: #fff;
 }
 
@@ -87,7 +97,7 @@ h1 {
 
 .btn-reset {
   background: none;
-  color: #5b5fc7;
+  color: var(--fator-blue-dark);
   text-decoration: underline;
   font-weight: 400;
 }
